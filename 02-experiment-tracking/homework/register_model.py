@@ -68,8 +68,8 @@ def run(data_path, log_top):
     best_run = client.search_runs(
         experiment_ids=experiment.experiment_id,
         run_view_type=ViewType.ACTIVE_ONLY,
-        max_results=1,
-        order_by=["metrics.rmse ASC"],
+        max_results=log_top,
+        order_by=["metrics.test_rmse ASC"],
     )[0]
 
     # register the best model
