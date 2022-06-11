@@ -10,3 +10,5 @@ data/
 .venv
 venv
 .idea
+
+**/.DS_Store
